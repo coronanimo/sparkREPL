@@ -1,0 +1,104 @@
+@(title: String)
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>@title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.css"))'>
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap-glyphicons.css"))'>
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/font-awesome.css"))'>
+    <link rel='stylesheet' media='screen' href='@routes.Assets.at("stylesheets/site.css")'>
+    <link rel='stylesheet' media='screen' href='@routes.Assets.at("stylesheets/main.css")'>
+    <link rel='stylesheet' media='screen' href='@routes.Assets.at("stylesheets/leftnavbar.css")'>
+    <link rel='shortcut icon' type='image/png' href='@routes.Assets.at("images/favicon.png")'>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-static-top hidden-print">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars fa-lg"></i>
+            </button>
+            <a class="navbar-brand" href="../"><i class="fa fa-flag"></i> Stream Vector</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="hidden-sm "><a href="../">Home</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+   <div id="main-container"  class="container-fluid" ng-app="dashboardApp" ng-controller="dashboardController">
+   <div class="row">
+    <!-- Toolbar Start-->
+    <div id="toolbar-div" class="col-md-2">
+        <div id="centeredmenu">
+
+
+            <ul ui-on-Drop="onDrop($event,$data,toolbarList)">
+                <li ui-draggable="true" drag="tool"
+                    on-drop-success="dropSuccessHandler($event,$index,toolbarList)"
+                    ng-repeat="tool in toolbarList track by $index">
+                    <i class={{tool.class}}></i><br>
+                    {{tool.name}}
+                </li>
+            </ul>
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <!-- Toolbar End -->
+
+    <!-- Workflow area Start -->
+    <div id="workflow-div" class="col-md-9" ui-on-Drop="onWorkFlowDrop($event,$data,workflowArray)">
+
+        <ul>
+            <li ui-draggable="true" drag="tool"
+                on-drop-success="dropSuccessHandler($event,$index,workflowArray)"
+                ng-repeat="tool in workflowArray track by $index">
+                {{tool.name}}
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Workflow End -->
+ </div>
+
+</div>
+
+
+
+
+
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("angular.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("angular-route.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("draganddrop.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("src/ace.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("01.08.2014/src/mode-scala.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("01.08.2014/src/theme-monokai.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("d3.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("ui-ace.js"))'></script>
+<script src='@routes.Assets.at("javascripts/angular-drag-and-drop-lists.js")' type='text/javascript'></script>
+<script src='@routes.Assets.at("app/controllers/main.js")' type='text/javascript'></script>
+<script src='@routes.Assets.at("javascripts/leftnavbar.js")' type='text/javascript'></script>
+</body>
+</html>

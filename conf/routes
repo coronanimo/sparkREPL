@@ -7,6 +7,8 @@ GET     /                           controllers.Application.index
 
 GET     /workbook                   controllers.Application.workbook
 
+GET     /dashboard                  controllers.Application.dashboard
+
 POST   /runscriptlet                controllers.Application.scriptletCall
 
 # Map static resources from the /public folder to the /assets URL path

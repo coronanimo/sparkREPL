@@ -4168,7 +4168,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse {
     background-color: #1d9d74;
-    border-color: #1b926c;
+    border-color: #0099ff;
 }
 .navbar-inverse .navbar-brand {
     color: #ffffff;
@@ -4193,7 +4193,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
     color: #ffffff;
-    background-color: #1b926c;
+    background-color: #0099ff;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
@@ -4218,15 +4218,15 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #1b926c;
+    background-color: #0099ff;
     color: #ffffff;
 }
 @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-        border-color: #1b926c;
+        border-color: #0099ff;
     }
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-        background-color: #1b926c;
+        background-color: #0099ff;
     }
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
         color: #b0ddce;
@@ -4240,7 +4240,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
         color: #ffffff;
-        background-color: #1b926c;
+        background-color: #0099ff;
     }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -6188,7 +6188,7 @@ button.close {
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-    border-color: #1b926c;
+    border-color: #0099ff;
 }
 .navbar-inverse .navbar-toggle {
     color: #ffffff;
@@ -6222,7 +6222,7 @@ button.close {
 .jumbotron {
     background-color: #1fa67a;
     border-top: 1px solid #34a782;
-    border-bottom: 1px solid #1b926c;
+    border-bottom: 1px solid #0099ff;
     margin-bottom: 0;
     padding: 50px 0 40px;
 }
@@ -6460,7 +6460,7 @@ section {
 }
 #footer {
     background-color: #1fa67a;
-    border-top: 1px solid #1b926c;
+    border-top: 1px solid #0099ff;
     color: #a5d8c7;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 }

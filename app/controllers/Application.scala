@@ -21,6 +21,10 @@ object Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
   }
 
+  def dashboard = Action {
+    Ok(views.html.dashboard("Your new application is ready."))
+  }
+
 
   def workbook = Action {
 
