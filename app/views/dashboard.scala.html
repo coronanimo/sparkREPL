@@ -5,12 +5,16 @@
     <title>@title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- loading jQuery UI css -->
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/flick/jquery-ui.css" />
     <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.css"))'>
     <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap-glyphicons.css"))'>
     <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/font-awesome.css"))'>
+    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.gridster.css"))'>
     <link rel='stylesheet' media='screen' href='@routes.Assets.at("stylesheets/site.css")'>
     <link rel='stylesheet' media='screen' href='@routes.Assets.at("stylesheets/main.css")'>
     <link rel='stylesheet' media='screen' href='@routes.Assets.at("stylesheets/leftnavbar.css")'>
+    <link rel='stylesheet' media='screen' href='@routes.Assets.at("jsPanel/jsPanel.css")'>
     <link rel='shortcut icon' type='image/png' href='@routes.Assets.at("images/favicon.png")'>
 </head>
 <body>
@@ -61,12 +65,13 @@
 
 
 
+
     </div>
 
     <!-- Toolbar End -->
 
     <!-- Workflow area Start -->
-    <div id="workflow-div" class="col-md-9" ui-on-Drop="onWorkFlowDrop($event,$data,workflowArray)">
+    <div id="workflow-area" class="col-md-9 gridster" ui-on-Drop="onWorkFlowDrop($event,$data,workflowArray)">
 
         <ul>
             <li ui-draggable="true" drag="tool"
@@ -78,6 +83,25 @@
 
     </div>
 
+       <div id="sourceListDiv" class="jsPanel-hdr jsPanel-theme-default">
+
+
+       </div>
+
+   <!--    <div id="demo-1" class="gridster">
+           <ul>
+               <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">0</li>
+               <li data-row="1" data-col="3" data-sizex="1" data-sizey="2">1</li>
+               <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">2</li>
+               <li data-row="3" data-col="2" data-sizex="3" data-sizey="1">3</li>
+               <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">4</li>
+               <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">5</li>
+               <li data-row="4" data-col="2" data-sizex="1" data-sizey="1">6</li>
+               <li data-row="5" data-col="2" data-sizex="1" data-sizey="1">7</li>
+               <li data-row="4" data-col="4" data-sizex="1" data-sizey="1">8</li>
+           </ul>
+       </div>-->
+
     <!-- Workflow End -->
  </div>
 
@@ -87,7 +111,24 @@
 
 
 
+<!--<div id="sourceListDiv" class="jsPanel-hdr jsPanel-theme-default">
+    <h3 class="jsPanel-title"></h3>
+    <div class="jsPanel-hdr-r">
+        <div class="jsPanel-btn-close"></div>
+        <div class="jsPanel-btn-norm"></div>
+        <div class="jsPanel-btn-max"></div>
+        <div class="jsPanel-btn-min"></div>
+        <div class="jsPanel-btn-small"></div>
+    </div>
+    <div class="jsPanel-hdr-toolbar"></div>
+</div>-->
+
+
+
+
+
 <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.js"))'></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("angular.js"))'></script>
 <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("angular-route.js"))'></script>
 <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("draganddrop.js"))'></script>
@@ -95,10 +136,31 @@
 <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("01.08.2014/src/mode-scala.js"))'></script>
 <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("01.08.2014/src/theme-monokai.js"))'></script>
 <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("ui-bootstrap.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("ui-bootstrap-tpls.js"))'></script>
 <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("d3.js"))'></script>
 <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("ui-ace.js"))'></script>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.gridster.js"))'></script>
 <script src='@routes.Assets.at("javascripts/angular-drag-and-drop-lists.js")' type='text/javascript'></script>
+<script src='@routes.Assets.at("jsPanel/jquery.jspanel.js")' type='text/javascript'></script>
 <script src='@routes.Assets.at("app/controllers/main.js")' type='text/javascript'></script>
 <script src='@routes.Assets.at("javascripts/leftnavbar.js")' type='text/javascript'></script>
+
+<script>
+
+    $(function(){ //DOM Ready
+
+
+
+
+
+    });
+
+
+</script>
+
+
+
+
 </body>
 </html>

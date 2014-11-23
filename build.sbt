@@ -25,6 +25,8 @@ libraryDependencies ++= Seq(
   "org.webjars" % "angular-ui-bootstrap" % "0.11.2",
   "org.webjars" % "angular-ui-sortable" % "0.12.11-1",
   "org.webjars" % "angular-dragdrop" % "1.0.3",
+  "org.webjars" % "jsplumb" % "1.6.4",
+  "org.webjars" % "gridster.js" % "0.5.6",
   "org.webjars" % "bootstrap-glyphicons" % "bdd2cbfba0"
 )
 
